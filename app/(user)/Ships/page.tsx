@@ -25,6 +25,8 @@ const page = async () => {
             name={item?.name}
             description={item?.roles.join(", ")}
             tag={item?.type as string}
+            id={item?.id}
+            page="Ships"
           />
         ))}
       </div>
