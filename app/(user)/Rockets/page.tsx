@@ -8,6 +8,7 @@ const Rockets = async () => {
   const rocketData: IRocketResponse[] = await fetch(
     `${ROCKET_WIKI_BASE_URL}/rockets`
   ).then((res) => res.json());
+
   return (
     <>
       <div className="mb-4">
@@ -22,6 +23,7 @@ const Rockets = async () => {
             key={item?.id}
             image={item?.flickr_images[0]}
             tag={item?.active ? "Active" : "Inactive"}
+            page="Rockets"
           />
         ))}
       </div>

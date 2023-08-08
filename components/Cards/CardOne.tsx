@@ -5,16 +5,25 @@ import { textLimit } from "../Text/TextLimit";
 import NoImageFound from "../../assets/no-image-available.svg";
 
 interface ICardOneProps {
+  id: string;
+  page?: string;
   name: string;
   image: string;
   description: string;
   tag?: string;
 }
 
-const CardOne: FC<ICardOneProps> = ({ name, image, description, tag }) => {
+const CardOne: FC<ICardOneProps> = ({
+  id,
+  name,
+  image,
+  description,
+  tag,
+  page,
+}) => {
   return (
     <Link
-      href="#"
+      href={`/${page}/${id}`}
       className="relative bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
     >
       {image ? (
