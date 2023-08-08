@@ -1,5 +1,5 @@
-// import { useLocation } from "react-router-dom";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface Props {
   to: string;
@@ -10,9 +10,9 @@ interface Props {
 }
 
 const NavLink: React.FC<Props> = ({ to, label, isPro, Icon, onClick }) => {
-  // const location = useLocation();
-  // const isActive = location.pathname.split("/")[1] == to.split("/")[1];
-  const isActive = false;
+  const pathName = usePathname();
+  console.log(pathName);
+  const isActive = pathName.split("/")[1] == to.split("/")[1];
 
   return (
     <Link

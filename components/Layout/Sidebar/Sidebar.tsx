@@ -79,7 +79,7 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
               Icon={<HomeIcon className="w-6" />}
             />
             <NavLink
-              to="/products"
+              to="/Products"
               label="Products"
               isPro={false}
               Icon={<ProductIcon className="w-6" />}
