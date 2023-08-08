@@ -13,7 +13,7 @@ interface IRocketDetailsPage {
 
 const RocketDetailsPage = async ({ params: { slug } }: IRocketDetailsPage) => {
   const singleRocketData: IRocketResponse = await fetch(
-    `${ROCKET_WIKI_BASE_URL}/rockets/${slug}`
+    `${ROCKET_WIKI_BASE_URL}/landpads/${slug}`
   ).then((res) => res.json());
 
   const {

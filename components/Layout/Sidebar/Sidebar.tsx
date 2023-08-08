@@ -9,6 +9,7 @@ import {
   Bars3Icon as MenuIcon,
 } from "@heroicons/react/24/outline";
 import DirectionsBoatFilledOutlinedIcon from "@mui/icons-material/DirectionsBoatFilledOutlined";
+import GamepadIcon from "@mui/icons-material/Gamepad";
 import { RootState, themeSwitch } from "@/app/store";
 import { ThemeTypesEnum } from "@/types/enum";
 import ThemeSwitch from "@/components/Switch/ThemeSwitch";
@@ -91,6 +92,13 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
               label="Ships"
               isPro={false}
               Icon={<DirectionsBoatFilledOutlinedIcon fontSize="small" />}
+              onClick={closeSidebar}
+            />
+            <NavLink
+              to="/LandingPads"
+              label="Landing Pads"
+              isPro={false}
+              Icon={<GamepadIcon fontSize="small" />}
               onClick={closeSidebar}
             />
             <ThemeSwitch theme={theme} onClick={handleChangeTheme} />

@@ -4,15 +4,16 @@
 * company info
 * cores
 * crew
-* dragons
-* landpads
+* ⏭️ dragons
+* ⏭️ landpads
 * launches
-* launchpads
+* ⏭️ launchpads
 * payloads
 * roadster
-* rockets
-* ships
+* ✅ rockets
+* ✅ ships
 * starlink
+* dragons ???? ⏭️
 
 ## Works to do
 
@@ -20,6 +21,7 @@
 * add a feature to blur dynamic loading images'
 * add a back button
 * add a loading page for dynamic pages
+* design the table component like a zebra pattern
 
 ## Future features
 
