@@ -29,9 +29,13 @@ const Carousel: FC<ICarouselProps> = ({ images }) => {
           >
             <Image
               src={image}
+              style={{
+                width: "100%",
+                objectFit: "cover",
+              }}
               className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               alt={`Slide ${index + 1}`}
-              width={200}
+              width={600}
               height={200}
             />
           </div>
@@ -49,7 +53,9 @@ const Carousel: FC<ICarouselProps> = ({ images }) => {
             data-carousel-slide-to={index}
             onClick={() => handleSlideChange(index)}
             key={index}
-          ></button>
+          >
+            ↑
+          </button>
         ))}
       </div>
       <button
@@ -62,10 +68,11 @@ const Carousel: FC<ICarouselProps> = ({ images }) => {
       >
         <ChevronLeftIcon
           style={{
-            border: "2px solid red",
-            backgroundColor: "red",
+            padding: "2px",
+            backgroundColor: "white",
+            borderRadius: "100%",
           }}
-          className="w-4 h-4 text-white dark:text-gray-800"
+          className="w-7 text-white dark:text-gray-800"
           strokeWidth={2}
         />
       </button>
@@ -75,8 +82,14 @@ const Carousel: FC<ICarouselProps> = ({ images }) => {
         data-carousel-next
         onClick={() => handleSlideChange((activeIndex + 1) % images.length)}
       >
-        {/* Icon and label */}
-        <ChevronRightIcon className="w-4 h-4 text-white dark:text-gray-800" />
+        <ChevronRightIcon
+          style={{
+            padding: "2px",
+            backgroundColor: "white",
+            borderRadius: "100%",
+          }}
+          className="w-7 text-white dark:text-gray-800"
+        />
       </button>
     </div>
   );
