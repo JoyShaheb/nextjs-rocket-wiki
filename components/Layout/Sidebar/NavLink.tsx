@@ -11,7 +11,6 @@ interface Props {
 
 const NavLink: React.FC<Props> = ({ to, label, isPro, Icon, onClick }) => {
   const pathName = usePathname();
-  console.log(pathName);
   const isActive = pathName.split("/")[1] == to.split("/")[1];
 
   return (

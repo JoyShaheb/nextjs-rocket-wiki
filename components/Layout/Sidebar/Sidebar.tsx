@@ -6,6 +6,7 @@ import {
   HomeIcon,
   ShoppingBagIcon as ProductIcon,
   XMarkIcon,
+  RocketLaunchIcon,
   Bars3Icon as MenuIcon,
 } from "@heroicons/react/24/outline";
 import { RootState, themeSwitch } from "@/app/store";
@@ -83,6 +84,13 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
               label="Products"
               isPro={false}
               Icon={<ProductIcon className="w-6" />}
+              onClick={closeSidebar}
+            />
+            <NavLink
+              to="/Rockets"
+              label="Rockets"
+              isPro={false}
+              Icon={<RocketLaunchIcon className="w-6" />}
               onClick={closeSidebar}
             />
             <ThemeSwitch theme={theme} onClick={handleChangeTheme} />
