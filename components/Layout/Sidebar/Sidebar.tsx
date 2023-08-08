@@ -9,6 +9,7 @@ import {
   RocketLaunchIcon,
   Bars3Icon as MenuIcon,
 } from "@heroicons/react/24/outline";
+import DirectionsBoatFilledOutlinedIcon from "@mui/icons-material/DirectionsBoatFilledOutlined";
 import { RootState, themeSwitch } from "@/app/store";
 import { ThemeTypesEnum } from "@/types/enum";
 import ThemeSwitch from "@/components/Switch/ThemeSwitch";
@@ -91,6 +92,13 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
               label="Rockets"
               isPro={false}
               Icon={<RocketLaunchIcon className="w-6" />}
+              onClick={closeSidebar}
+            />
+            <NavLink
+              to="/Ships"
+              label="Ships"
+              isPro={false}
+              Icon={<DirectionsBoatFilledOutlinedIcon fontSize="small" />}
               onClick={closeSidebar}
             />
             <ThemeSwitch theme={theme} onClick={handleChangeTheme} />
