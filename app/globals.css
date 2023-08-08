@@ -3,25 +3,36 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --color-1: #1F2937;
+  --color-2: #1F2937;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* For Webkit-based browsers (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+  width: 8px;
+  /* Width of the scrollbar */
+  height: 8px;
+  /* Height of the scrollbar for horizontal scrollbars */
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+::-webkit-scrollbar-track {
+  background: var(--color-1);
+  /* Background color of the scrollbar track */
+  border-radius: 4px;
+  /* Add border radius to make the scrollbar track look smooth */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-2);
+  /* Light blue color for the scrollbar thumb */
+  border-radius: 4px;
+  /* Add border radius to make the scrollbar thumb look smooth */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  /* Make the scrollbar thin */
+  scrollbar-color: var(--color-2) var(--color-1);
+  /* Light blue color for the scrollbar thumb and background color for the scrollbar track */
 }
