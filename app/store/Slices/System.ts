@@ -8,7 +8,7 @@ interface SystemState {
 }
 
 const initialState: SystemState = {
-  mode: ThemeTypesEnum.LIGHT,
+  mode: ThemeTypesEnum.DARK,
 };
 
 export const sysmtemSlice = createSlice({

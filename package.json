@@ -23,6 +23,7 @@
   },
   "pre-commit": "lint-staged",
   "dependencies": {
+    "@heroicons/react": "^2.0.18",
     "@reduxjs/toolkit": "^1.9.5",
     "@types/node": "20.4.8",
     "@types/react": "18.2.18",
@@ -40,9 +41,9 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
+    "husky": "^8.0.0",
     "lint-staged": "^13.2.3",
     "pre-commit": "^1.2.2",
-    "prettier": "3.0.1",
-    "husky": "^8.0.0"
+    "prettier": "3.0.1"
   }
 }
