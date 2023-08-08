@@ -5,7 +5,7 @@
 * cores
 * crew
 * ⏭️ dragons
-* ⏭️ landpads
+* ✅ landpads
 * launches
 * ⏭️ launchpads
 * payloads
@@ -22,6 +22,7 @@
 * add a back button
 * add a loading page for dynamic pages
 * design the table component like a zebra pattern
+* ✅ add a logo to the app
 
 ## Future features
 

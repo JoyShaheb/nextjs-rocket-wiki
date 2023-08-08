@@ -4,7 +4,7 @@ import { ROCKET_WIKI_BASE_URL } from "@/types/Constants";
 import { ILandingPadsResponse } from "@/types/interface";
 import Image from "next/image";
 import NoImageFound from "../../../../assets/no-image-available.svg";
-import TableRow from "@/components/Table/TableRow";
+import { TableRow, TableParent } from "@/components/Table/index";
 
 interface ILandingPadDetailsPage {
   params: {
@@ -28,7 +28,6 @@ const LandingPadDetails = async ({
     images,
     landing_attempts,
     landing_successes,
-    latitude,
     locality,
     name,
     type,
@@ -55,27 +54,26 @@ const LandingPadDetails = async ({
         }}
       />
 
+      <p className="mt-5 font-normal text-md text-gray-700 dark:text-gray-400">
+        {details}
+      </p>
+
       <h1 className={`text-center text-3xl my-4 ${gradientTextStyles}`}>
         Details
       </h1>
 
-      <div className="relative overflow-x-auto">
-        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <tr>
-              <th scope="col" className="px-6 py-3">
-                Properties
-              </th>
-              <th scope="col" className="px-6 py-3">
-                Values
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <TableRow data1="Full Name" data2={full_name as string} />
-          </tbody>
-        </table>
-      </div>
+      <TableParent>
+        <TableRow data1="ID" data2={id as string} />
+        <TableRow data1="Name" data2={name as string} />
+        <TableRow data1="Full Name" data2={full_name as string} />
+        <TableRow data1="Status" data2={status as string} />
+        <TableRow data1="type" data2={type as string} />
+        <TableRow data1="locality" data2={locality as string} />
+        <TableRow data1="region" data2={region as string} />
+        <TableRow data1="Launches" data2={`${launches?.length}`} />
+        <TableRow data1="Landing attempts" data2={`${landing_attempts}`} />
+        <TableRow data1="Landing success" data2={`${landing_successes}`} />
+      </TableParent>
     </div>
   );
 };

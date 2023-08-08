@@ -4,7 +4,7 @@ import { IShipResponse } from "@/types/interface";
 import Image from "next/image";
 import NoImageFound from "../../../../assets/no-image-available.svg";
 import { gradientTextStyles } from "@/components/Text/GradientText";
-import TableRow from "@/components/Table/TableRow";
+import { TableRow, TableParent } from "@/components/Table/index";
 
 interface IShipDetailsPage {
   params: {
@@ -52,31 +52,17 @@ const ShipDetailsPage = async ({ params: { slug } }: IShipDetailsPage) => {
         Details
       </h1>
 
-      <div className="relative overflow-x-auto">
-        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <tr>
-              <th scope="col" className="px-6 py-3">
-                Properties
-              </th>
-              <th scope="col" className="px-6 py-3">
-                Values
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <TableRow data1="active" data2={`${active}`} />
-            <TableRow data1="roles" data2={`${roles.join(", ")}`} />
-            <TableRow data1="type" data2={type as string} />
-            <TableRow data1="home_port" data2={home_port as string} />
-            <TableRow data1="mass_kg" data2={`${mass_kg}`} />
-            <TableRow data1="year_built" data2={`${year_built}`} />
-            <TableRow data1="home_port" data2={home_port as string} />
-            <TableRow data1="launches" data2={`${launches?.length}`} />
-            <TableRow data1="status" data2={status as string} />
-          </tbody>
-        </table>
-      </div>
+      <TableParent>
+        <TableRow data1="active" data2={`${active}`} />
+        <TableRow data1="roles" data2={`${roles.join(", ")}`} />
+        <TableRow data1="type" data2={type as string} />
+        <TableRow data1="home_port" data2={home_port as string} />
+        <TableRow data1="mass_kg" data2={`${mass_kg}`} />
+        <TableRow data1="year_built" data2={`${year_built}`} />
+        <TableRow data1="home_port" data2={home_port as string} />
+        <TableRow data1="launches" data2={`${launches?.length}`} />
+        <TableRow data1="status" data2={status as string} />
+      </TableParent>
     </div>
   );
 };
