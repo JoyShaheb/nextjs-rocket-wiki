@@ -17,3 +17,11 @@
 ## Works to do
 
 * make sure all loading and error pages work as expected
+* add a feature to blur dynamic loading images'
+* add a back button
+* add a loading page for dynamic pages
+
+## Future features
+
+* unit testing
+* storybook

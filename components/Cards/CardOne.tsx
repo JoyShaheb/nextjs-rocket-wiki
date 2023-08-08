@@ -26,23 +26,13 @@ const CardOne: FC<ICardOneProps> = ({
       href={`/${page}/${id}`}
       className="relative bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
     >
-      {image ? (
-        <Image
-          className="rounded-t-lg w-[100%] object-cover h-[170px]"
-          src={image}
-          alt={name}
-          width={200}
-          height={100}
-        />
-      ) : (
-        <Image
-          className="rounded-t-lg w-[100%] object-cover h-[170px]"
-          src={NoImageFound}
-          alt={name}
-          width={200}
-          height={100}
-        />
-      )}
+      <Image
+        className="rounded-t-lg w-[100%] object-cover h-[170px]"
+        src={image ? image : NoImageFound}
+        alt={name}
+        width={200}
+        height={100}
+      />
 
       <div className="p-5">
         <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">

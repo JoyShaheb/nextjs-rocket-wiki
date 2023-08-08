@@ -36,7 +36,10 @@ const Carousel: FC<ICarouselProps> = ({ images }) => {
               className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               alt={`Slide ${index + 1}`}
               width={600}
-              height={200}
+              quality={100}
+              height={1000}
+              // placeholder="blur"
+              // blurDataURL=""
             />
           </div>
         ))}

@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from "react-redux";
 import NavLink from "./NavLink";
 import {
   HomeIcon,
-  ShoppingBagIcon as ProductIcon,
   XMarkIcon,
   RocketLaunchIcon,
   Bars3Icon as MenuIcon,
@@ -79,13 +78,6 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
               isPro={false}
               onClick={closeSidebar}
               Icon={<HomeIcon className="w-6" />}
-            />
-            <NavLink
-              to="/Products"
-              label="Products"
-              isPro={false}
-              Icon={<ProductIcon className="w-6" />}
-              onClick={closeSidebar}
             />
             <NavLink
               to="/Rockets"
