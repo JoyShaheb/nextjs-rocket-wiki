@@ -23,8 +23,13 @@
 * add a loading page for dynamic pages
 * design the table component like a zebra pattern
 * ✅ add a logo to the app
+* work on carousel dark/light mode versions
 
 ## Future features
 
 * unit testing
 * storybook
+
+## Postman docs
+
+* <https://speeding-resonance-761807.postman.co/workspace/Portfolio-projects~f0d4015a-3dd8-4d57-9296-34f04c0bd586/request/18531452-78c5add0-25ac-4e11-ba0a-6782630511cf>

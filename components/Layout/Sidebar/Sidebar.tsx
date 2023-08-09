@@ -9,6 +9,7 @@ import {
   Bars3Icon as MenuIcon,
 } from "@heroicons/react/24/outline";
 import DirectionsBoatFilledOutlinedIcon from "@mui/icons-material/DirectionsBoatFilledOutlined";
+import CallMadeOutlinedIcon from "@mui/icons-material/CallMadeOutlined";
 import GamepadIcon from "@mui/icons-material/Gamepad";
 import { RootState, themeSwitch } from "@/app/store";
 import { ThemeTypesEnum } from "@/types/enum";
@@ -99,6 +100,13 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
               label="Landing Pads"
               isPro={false}
               Icon={<GamepadIcon fontSize="small" />}
+              onClick={closeSidebar}
+            />
+            <NavLink
+              to="/LaunchPads"
+              label="Launch Pads"
+              isPro={false}
+              Icon={<CallMadeOutlinedIcon fontSize="small" />}
               onClick={closeSidebar}
             />
             <ThemeSwitch theme={theme} onClick={handleChangeTheme} />
