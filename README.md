@@ -7,7 +7,7 @@
 * ⏭️ dragons
 * ✅ landpads
 * launches
-* ⏭️ launchpads
+* ✅ launchpads
 * payloads
 * roadster
 * ✅ rockets
