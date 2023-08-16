@@ -48,17 +48,29 @@ const RocketDetailsPage = async ({ params: { slug } }: IRocketDetailsPage) => {
       </h1>
 
       <TableParent>
-        <TableRow data1="height" data2={`${height?.meters} meters`} />
-        <TableRow data1="type" data2={type} />
-        <TableRow data1="diameter" data2={`${diameter?.meters} meters`} />
-        <TableRow data1="mass" data2={`${mass?.kg} Kilograms`} />
-        <TableRow data1="country" data2={country} />
-        <TableRow data1="active" data2={`${active}`} />
-        <TableRow data1="cost_per_launch" data2={`$ ${cost_per_launch}`} />
-        <TableRow data1="stages" data2={`${stages}`} />
-        <TableRow data1="success_rate_pct" data2={`${success_rate_pct} %`} />
-        <TableRow data1="first_flight" data2={first_flight} />
-        <TableRow data1="company" data2={company} />
+        <TableRow index={0} data1="height" data2={`${height?.meters} meters`} />
+        <TableRow index={1} data1="type" data2={type} />
+        <TableRow
+          index={0}
+          data1="diameter"
+          data2={`${diameter?.meters} meters`}
+        />
+        <TableRow index={1} data1="mass" data2={`${mass?.kg} Kilograms`} />
+        <TableRow index={0} data1="country" data2={country} />
+        <TableRow index={1} data1="active" data2={`${active}`} />
+        <TableRow
+          index={0}
+          data1="cost_per_launch"
+          data2={`$ ${cost_per_launch}`}
+        />
+        <TableRow index={1} data1="stages" data2={`${stages}`} />
+        <TableRow
+          index={0}
+          data1="success_rate_pct"
+          data2={`${success_rate_pct} %`}
+        />
+        <TableRow index={1} data1="first_flight" data2={first_flight} />
+        <TableRow index={0} data1="company" data2={company} />
       </TableParent>
     </div>
   );

@@ -34,7 +34,7 @@ const CardOne: FC<ICardOneProps> = ({
         height={100}
       />
 
-      <div className="p-5">
+      <div className="p-3">
         <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
           {name}
         </h5>

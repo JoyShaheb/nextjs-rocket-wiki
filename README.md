@@ -1,8 +1,7 @@
 # Works to do
 
-* make sure all loading and error pages work as expected
-* add a back button
-* add a loading page for dynamic pages
+* ✅ make sure all loading and error pages work as expected
+* ✅ add a loading page for dynamic pages
 * design the table component like a zebra pattern
 * work on carousel dark/light mode versions
 

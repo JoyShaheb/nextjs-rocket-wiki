@@ -63,16 +63,24 @@ const LandingPadDetails = async ({
       </h1>
 
       <TableParent>
-        <TableRow data1="ID" data2={id as string} />
-        <TableRow data1="Name" data2={name as string} />
-        <TableRow data1="Full Name" data2={full_name as string} />
-        <TableRow data1="Status" data2={status as string} />
-        <TableRow data1="type" data2={type as string} />
-        <TableRow data1="locality" data2={locality as string} />
-        <TableRow data1="region" data2={region as string} />
-        <TableRow data1="Launches" data2={`${launches?.length}`} />
-        <TableRow data1="Landing attempts" data2={`${landing_attempts}`} />
-        <TableRow data1="Landing success" data2={`${landing_successes}`} />
+        <TableRow index={1} data1="ID" data2={id as string} />
+        <TableRow index={0} data1="Name" data2={name as string} />
+        <TableRow index={1} data1="Full Name" data2={full_name as string} />
+        <TableRow index={0} data1="Status" data2={status as string} />
+        <TableRow index={1} data1="type" data2={type as string} />
+        <TableRow index={0} data1="locality" data2={locality as string} />
+        <TableRow index={1} data1="region" data2={region as string} />
+        <TableRow index={0} data1="Launches" data2={`${launches?.length}`} />
+        <TableRow
+          index={1}
+          data1="Landing attempts"
+          data2={`${landing_attempts}`}
+        />
+        <TableRow
+          index={0}
+          data1="Landing success"
+          data2={`${landing_successes}`}
+        />
       </TableParent>
     </div>
   );

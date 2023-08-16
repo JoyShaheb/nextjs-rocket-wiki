@@ -53,15 +53,15 @@ const ShipDetailsPage = async ({ params: { slug } }: IShipDetailsPage) => {
       </h1>
 
       <TableParent>
-        <TableRow data1="active" data2={`${active}`} />
-        <TableRow data1="roles" data2={`${roles.join(", ")}`} />
-        <TableRow data1="type" data2={type as string} />
-        <TableRow data1="home_port" data2={home_port as string} />
-        <TableRow data1="mass_kg" data2={`${mass_kg}`} />
-        <TableRow data1="year_built" data2={`${year_built}`} />
-        <TableRow data1="home_port" data2={home_port as string} />
-        <TableRow data1="launches" data2={`${launches?.length}`} />
-        <TableRow data1="status" data2={status as string} />
+        <TableRow index={1} data1="active" data2={`${active}`} />
+        <TableRow index={0} data1="roles" data2={`${roles.join(", ")}`} />
+        <TableRow index={1} data1="type" data2={type as string} />
+        <TableRow index={0} data1="home_port" data2={home_port as string} />
+        <TableRow index={1} data1="mass_kg" data2={`${mass_kg}`} />
+        <TableRow index={0} data1="year_built" data2={`${year_built}`} />
+        <TableRow index={1} data1="home_port" data2={home_port as string} />
+        <TableRow index={0} data1="launches" data2={`${launches?.length}`} />
+        <TableRow index={1} data1="status" data2={status as string} />
       </TableParent>
     </div>
   );

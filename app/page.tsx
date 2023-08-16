@@ -4,9 +4,11 @@ import Link from "next/link";
 const Home = () => {
   return (
     <div className="flex flex-col justify-center items-center h-[96vh]">
+      <div className="text-3xl">🚀</div>
       <h1
         className={`text-3xl text-center font-semibold ${gradientTextStyles} mb-2`}
       >
+        <></>
         Welcome to Rocket Wiki Page
       </h1>
       <div className="">

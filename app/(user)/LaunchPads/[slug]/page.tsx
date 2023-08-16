@@ -57,15 +57,27 @@ const page = async ({ params: { slug } }: ILaunchPadsDetailsPage) => {
       </h1>
 
       <TableParent>
-        <TableRow data1="Full Name" data2={full_name as string} />
-        <TableRow data1="Launch Attempts" data2={launch_attempts?.toString()} />
-        <TableRow data1="Launch Success" data2={launch_successes?.toString()} />
-        <TableRow data1="Launches" data2={launches?.length?.toString()} />
-        <TableRow data1="Region" data2={region as string} />
-        <TableRow data1="Rockets" data2={rockets?.toString()} />
-        <TableRow data1="Status" data2={status} />
-        <TableRow data1="TimeZone" data2={timezone as string} />
-        <TableRow data1="Locacity" data2={locality as string} />
+        <TableRow index={1} data1="Full Name" data2={full_name as string} />
+        <TableRow
+          index={0}
+          data1="Launch Attempts"
+          data2={launch_attempts?.toString()}
+        />
+        <TableRow
+          index={1}
+          data1="Launch Success"
+          data2={launch_successes?.toString()}
+        />
+        <TableRow
+          index={0}
+          data1="Launches"
+          data2={launches?.length?.toString()}
+        />
+        <TableRow index={1} data1="Region" data2={region as string} />
+        <TableRow index={0} data1="Rockets" data2={rockets?.toString()} />
+        <TableRow index={1} data1="Status" data2={status} />
+        <TableRow index={0} data1="TimeZone" data2={timezone as string} />
+        <TableRow index={1} data1="Locacity" data2={locality as string} />
       </TableParent>
     </div>
   );
