@@ -1,34 +1,16 @@
-# Pages
-
-* Capsules
-* company info
-* cores
-* crew
-* ⏭️ dragons
-* ✅ landpads
-* launches
-* ✅ launchpads
-* payloads
-* roadster
-* ✅ rockets
-* ✅ ships
-* starlink
-* dragons ???? ⏭️
-
-## Works to do
+# Works to do
 
 * make sure all loading and error pages work as expected
-* add a feature to blur dynamic loading images'
 * add a back button
 * add a loading page for dynamic pages
 * design the table component like a zebra pattern
-* ✅ add a logo to the app
 * work on carousel dark/light mode versions
 
 ## Future features
 
 * unit testing
 * storybook
+* add a feature to blur dynamic loading images'
 
 ## Postman docs
 
