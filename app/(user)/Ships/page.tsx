@@ -5,9 +5,11 @@ import { gradientTextStyles } from "@/components/Text/GradientText";
 import { IShipResponse } from "@/types/interface";
 
 const page = async () => {
-  const shipData: IShipResponse[] = await fetch(
-    `${ROCKET_WIKI_BASE_URL}/ships`
-  ).then((res) => res.json());
+  const shipData: IShipResponse[] = await fetch(`${ROCKET_WIKI_BASE_URL}/ships`)
+    .then((res) => res.json())
+    .catch((err) => {
+      throw new Error("Error fetching data from API");
+    });
 
   console.log(shipData);
   return (

@@ -7,7 +7,11 @@ import { IRocketResponse } from "@/types/interface";
 const Rockets = async () => {
   const rocketData: IRocketResponse[] = await fetch(
     `${ROCKET_WIKI_BASE_URL}/rockets`
-  ).then((res) => res.json());
+  )
+    .then((res) => res.json())
+    .catch((err) => {
+      throw new Error("Error fetching data from API");
+    });
 
   return (
     <>

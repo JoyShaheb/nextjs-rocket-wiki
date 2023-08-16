@@ -7,7 +7,12 @@ import { ILandingPadsResponse } from "@/types/interface";
 const page = async () => {
   const fetchLandingPads: ILandingPadsResponse[] = await fetch(
     `${ROCKET_WIKI_BASE_URL}/landpads`
-  ).then((res) => res.json());
+  )
+    .then((res) => res.json())
+    .catch((err) => {
+      throw new Error("Error fetching data from API");
+    });
+
   return (
     <div>
       <div className="mb-4">

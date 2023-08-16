@@ -7,7 +7,11 @@ import { CardOne } from "@/components/Cards";
 const page = async () => {
   const LaunchPadsData: ILaunchpadResponse[] = await fetch(
     `${ROCKET_WIKI_BASE_URL}/launchpads`
-  ).then((res) => res.json());
+  )
+    .then((res) => res.json())
+    .catch((err) => {
+      throw new Error("Error fetching data from API");
+    });
 
   return (
     <div>
