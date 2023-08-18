@@ -8,7 +8,6 @@ interface ITableRowProps {
 
 const TableRow: FC<ITableRowProps> = ({ data1, data2, index }) => {
   return (
-    // bg-white border-b dark:bg-gray-900 dark:border-gray-700
     <tr
       className={`capitalize bg-white border-b dark:bg-gray-${
         index % 2 == 0 ? 800 : 900

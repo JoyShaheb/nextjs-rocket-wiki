@@ -14,6 +14,10 @@ import GamepadIcon from "@mui/icons-material/Gamepad";
 import { RootState, themeSwitch } from "@/app/store";
 import { ThemeTypesEnum } from "@/types/enum";
 import ThemeSwitch from "@/components/Switch/ThemeSwitch";
+import NotesCard from "@/components/Cards/NotesCard";
+import Link from "next/link";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import { gradientTextStyles } from "@/components/Text/GradientText";
 
 const Sidebar = ({ children }: { children: React.ReactNode }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -61,7 +65,7 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
         } sm:translate-x-0`}
         aria-label="Sidebar"
       >
-        <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+        <div className="flex flex-col h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
           <button
             data-drawer-target="cta-button-sidebar"
             data-drawer-toggle="cta-button-sidebar"
@@ -73,6 +77,11 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
             <span className="sr-only">Close sidebar</span>
             <XMarkIcon className="w-6" strokeWidth={2} />
           </button>
+          <div
+            className={`text-center text-2xl font-bold mb-3 ${gradientTextStyles}`}
+          >
+            Rocket Wiki
+          </div>
           <ul className="space-y-2">
             <NavLink
               to="/"
@@ -111,29 +120,15 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
             />
             <ThemeSwitch theme={theme} onClick={handleChangeTheme} />
           </ul>
-          <div
-            id="dropdown-cta"
-            className="p-4 mt-6 rounded-lg bg-blue-50 dark:bg-blue-900"
-            role="alert"
+          <NotesCard label="Note" note="This app was made using NextJS 13" />
+          <Link
+            href="https://github.com/JoyShaheb/nextjs-rocket-wiki"
+            target="_blank"
+            className="self-center mt-3"
+            title="Github Repository"
           >
-            <div className="flex items-center mb-3">
-              <span className="bg-orange-100 text-orange-800 text-sm font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-orange-200 dark:text-orange-900">
-                Beta
-              </span>
-              <button
-                type="button"
-                className="ml-auto -mx-1.5 -my-1.5 bg-blue-50 text-blue-900 rounded-lg focus:ring-2 focus:ring-blue-400 p-1 hover:bg-blue-200 inline-flex h-6 w-6 dark:bg-blue-900 dark:text-blue-400 dark:hover:bg-blue-800"
-                data-dismiss-target="#dropdown-cta"
-                aria-label="Close"
-              >
-                <span className="sr-only">Close</span>
-                <XMarkIcon className="w-6" strokeWidth={2} />
-              </button>
-            </div>
-            <p className="text-sm text-blue-800 dark:text-blue-400">
-              The App is in beta mode, feel free to suggest us for new features.
-            </p>
-          </div>
+            <GitHubIcon fontSize="medium" />
+          </Link>
         </div>
       </aside>
 
