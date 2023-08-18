@@ -5,6 +5,7 @@
 * Dynamic image loading
 * Responsive design
 * animated loading skeletons
+* dark/light mode
 
 ## outcome?
 
