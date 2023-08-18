@@ -48,19 +48,20 @@ const Carousel: FC<ICarouselProps> = ({ images }) => {
         {images.map((_, index) => (
           <button
             type="button"
-            className={`w-3 h-3 rounded-full ${
-              activeIndex === index ? "bg-white" : ""
-            }`}
+            className={`w-3 h-3 ${
+              activeIndex === index
+                ? "bg-blue-500"
+                : "bg-gray-300 hover:bg-gray-400"
+            } rounded-full focus:outline-none`}
             aria-current={activeIndex === index}
             aria-label={`Slide ${index + 1}`}
             data-carousel-slide-to={index}
             onClick={() => handleSlideChange(index)}
             key={index}
-          >
-            ↑
-          </button>
+          ></button>
         ))}
       </div>
+
       <button
         type="button"
         className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
@@ -75,7 +76,7 @@ const Carousel: FC<ICarouselProps> = ({ images }) => {
             backgroundColor: "white",
             borderRadius: "100%",
           }}
-          className="w-7 text-white dark:text-gray-800"
+          className="w-7 text-gray-800"
           strokeWidth={2}
         />
       </button>
@@ -91,7 +92,7 @@ const Carousel: FC<ICarouselProps> = ({ images }) => {
             backgroundColor: "white",
             borderRadius: "100%",
           }}
-          className="w-7 text-white dark:text-gray-800"
+          className="w-7 text-gray-800"
         />
       </button>
     </div>

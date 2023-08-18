@@ -1,16 +1,22 @@
-# Works to do
+# Features
 
-* ✅ make sure all loading and error pages work as expected
-* ✅ add a loading page for dynamic pages
-* ✅ design the table component like a zebra pattern
-* work on carousel dark/light mode versions
-* ✅ add branding and a logo
+* Error handling with error boundaries
+* Loading states for async data
+* Dynamic image loading
+* Responsive design
+* animated loading skeletons
+
+## outcome?
+
+This project is polised and complete as of August 18th, 2023. I am happy with the outcome and I am looking forward to improve it in the future.
 
 ## Future features
 
 * unit testing
 * storybook
-* add a feature to blur dynamic loading images'
+* add a feature to blur dynamic loading images
+* add a feature to lazy load images
+* improve loading time, performances
 
 ## Postman docs
 
