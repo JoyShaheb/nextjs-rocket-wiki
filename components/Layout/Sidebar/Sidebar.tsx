@@ -1,6 +1,6 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React, { useState } from "react";
+import { useTheme } from "next-themes";
 import NavLink from "./NavLink";
 import {
   HomeIcon,
@@ -11,7 +11,6 @@ import {
 import DirectionsBoatFilledOutlinedIcon from "@mui/icons-material/DirectionsBoatFilledOutlined";
 import CallMadeOutlinedIcon from "@mui/icons-material/CallMadeOutlined";
 import GamepadIcon from "@mui/icons-material/Gamepad";
-import { RootState, themeSwitch } from "@/app/store";
 import { ThemeTypesEnum } from "@/types/enum";
 import ThemeSwitch from "@/components/Switch/ThemeSwitch";
 import NotesCard from "@/components/Cards/NotesCard";
@@ -21,29 +20,14 @@ import { gradientTextStyles } from "@/components/Text/GradientText";
 
 const Sidebar = ({ children }: { children: React.ReactNode }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const dispatch = useDispatch();
+  const { theme, setTheme } = useTheme();
 
-  const closeSidebar = () => {
-    setIsSidebarOpen(false);
-  };
-
-  const theme = useSelector((state: RootState) => state.system.mode);
-
-  useEffect(() => {
-    document.documentElement.classList.toggle(
-      ThemeTypesEnum.DARK,
-      theme === ThemeTypesEnum.DARK
-    );
-  }, [theme]);
+  const closeSidebar = () => setIsSidebarOpen(false);
 
   const handleChangeTheme = () =>
-    dispatch(
-      themeSwitch(
-        theme === ThemeTypesEnum.LIGHT
-          ? ThemeTypesEnum.DARK
-          : ThemeTypesEnum.LIGHT
-      )
-    );
+    theme === ThemeTypesEnum.DARK
+      ? setTheme(ThemeTypesEnum.LIGHT)
+      : setTheme(ThemeTypesEnum.DARK);
 
   return (
     <>
@@ -118,7 +102,10 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
               Icon={<CallMadeOutlinedIcon fontSize="small" />}
               onClick={closeSidebar}
             />
-            <ThemeSwitch theme={theme} onClick={handleChangeTheme} />
+            <ThemeSwitch
+              theme={theme as ThemeTypesEnum}
+              onClick={handleChangeTheme}
+            />
           </ul>
           <NotesCard label="Note" note="This app was made using NextJS 13" />
           <Link
@@ -131,7 +118,6 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
           </Link>
         </div>
       </aside>
-
       <div className="p-4 sm:ml-64">{children}</div>
     </>
   );
